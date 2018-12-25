@@ -1,7 +1,19 @@
 #include "Rov.h"
-
+#include "OutputSubSystem.h"
+#include "InputSubSystem.h"
+#include "IOSubSystem.h"
 Rov::Rov()
 {
+	int i = 0;
+#if OUTPUTSUBSYSTEM_ENABLE
+	m_subsystem[i++] = new OutputSubSystem;
+#endif
+#if INPUTSUBSYSTEM_ENABLE
+	m_subsystem[i++] = new InputSubSystem;
+#endif
+#if IOSUBSYSTEM_ENABLE
+	m_subsystem[i++] = new IOSubSystem;
+#endif
 }
 
 
