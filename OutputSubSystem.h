@@ -9,22 +9,10 @@
 class OutputSubSystem :public SubSystem
 {
 public:
-	OutputSubSystem()
-	{
-		int i = 0;
-#ifdef MANIPULATOR_ENABLE
-		devices[i++] = new ROVBuilderManipulator();
-#endif
-#ifdef THRUSTERSSUBSYSTEM_ENABLE
-		devices[i++] = new ThrustersSubSystem();
-#endif
-#ifdef ROTARYCAMERA_ENABLE
-		devices[i++] = new Cameras();
-#endif
-
-	}
-	void apply(RovData& rov_data);
-	Output* devices[SIZE_OUTPUT_DEVICES];
+	OutputSubSystem();
+	void init() override;
+	void apply(RovData& rov_data)override;
+	Output* m_devices[SIZE_OUTPUT_DEVICES];
 };
 
 

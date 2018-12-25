@@ -8,13 +8,8 @@
 class IOSubSystem : public SubSystem
 {
 public:
-	IOSubSystem()
-	{
-		int i = 0;
-#ifdef UDP_ENABLE
-		devices[i++] = new UDPConnection();
-#endif
-	}
+	IOSubSystem();
+	void init() override;
 	void apply(RovData& rov_data) override;
-	InputOutput* devices[SIZE_IO_DEVICES];
+	InputOutput* m_devices[SIZE_IO_DEVICES];
 };

@@ -8,20 +8,10 @@
 class InputSubSystem :public SubSystem
 {
 public:
-	InputSubSystem()
-	{
-
-		int i = 0;
-#ifdef IMU_ENABLE
-		//devices[i++] = new IMU();
-#endif 
-#ifdef DnT_ENABLE
-		//devices[i++] = new DnT();
-#endif
-
-	}
+	InputSubSystem();
+	void init() override;
 	void apply(RovData& rov_data) override;
-	Input* devices[SIZE_INPUT_DEVICES];
+	Input* m_devices[SIZE_INPUT_DEVICES];
 };
 
 
