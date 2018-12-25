@@ -77,8 +77,8 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\ROVLibs-master;$(ProjectDir)..\..\..\..\..\Program Files (x86)\Arduino\hardware\arduino\avr\libraries\SPI\src;$(ProjectDir)..\..\..\..\..\Program Files (x86)\Arduino\libraries\Ethernet\src;$(ProjectDir)..\..\..\..\..\Program Files (x86)\Arduino\libraries\Servo\src;$(ProjectDir)..\..\..\..\..\Program Files (x86)\Arduino\libraries\Ethernet\src\utility;$(ProjectDir)..\..\..\..\..\Program Files (x86)\Arduino\libraries;$(ProjectDir)..\..\..\..\..\Program Files (x86)\Arduino\hardware\arduino\avr\libraries;$(ProjectDir)..\..\..\Documents\Arduino\libraries;$(ProjectDir)..\..\..\..\..\Program Files (x86)\Arduino\hardware\arduino\avr\cores\arduino;$(ProjectDir)..\..\..\..\..\Program Files (x86)\Arduino\hardware\arduino\avr\variants\mega;$(ProjectDir)..\..\..\..\..\Program Files (x86)\Arduino\hardware\tools\avr\avr\include;$(ProjectDir)..\..\..\..\..\Program Files (x86)\Arduino\hardware\tools\avr\avr\include\avr;$(ProjectDir)..\..\..\..\..\Program Files (x86)\Arduino\hardware\tools\avr\lib\gcc\avr\4.8.1\include;$(ProjectDir)..\..\..\..\..\Program Files (x86)\Arduino\hardware\tools\avr\lib\gcc\avr\4.9.2\include;$(ProjectDir)..\..\..\..\..\Program Files (x86)\Arduino\hardware\tools\avr\lib\gcc\avr\4.9.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <ForcedIncludeFiles>$(ProjectDir)__vm\.ROVLibs-master.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\ROVLibs;$(ProjectDir)..\..\..\..\..\Program Files (x86)\Arduino\hardware\arduino\avr\libraries\SPI\src;$(ProjectDir)..\..\..\..\..\Program Files (x86)\Arduino\libraries\Ethernet\src;$(ProjectDir)..\..\..\..\..\Program Files (x86)\Arduino\libraries\Servo\src;$(ProjectDir)..\..\..\..\..\Program Files (x86)\Arduino\libraries\Ethernet\src\utility;$(ProjectDir)..\..\..\..\..\Program Files (x86)\Arduino\libraries;$(ProjectDir)..\..\..\..\..\Program Files (x86)\Arduino\hardware\arduino\avr\libraries;$(ProjectDir)..\..\..\Documents\Arduino\libraries;$(ProjectDir)..\..\..\..\..\Program Files (x86)\Arduino\hardware\arduino\avr\cores\arduino;$(ProjectDir)..\..\..\..\..\Program Files (x86)\Arduino\hardware\arduino\avr\variants\mega;$(ProjectDir)..\..\..\..\..\Program Files (x86)\Arduino\hardware\tools\avr\avr\include;$(ProjectDir)..\..\..\..\..\Program Files (x86)\Arduino\hardware\tools\avr\avr\include\avr;$(ProjectDir)..\..\..\..\..\Program Files (x86)\Arduino\hardware\tools\avr\lib\gcc\avr\4.8.1\include;$(ProjectDir)..\..\..\..\..\Program Files (x86)\Arduino\hardware\tools\avr\lib\gcc\avr\4.9.2\include;$(ProjectDir)..\..\..\..\..\Program Files (x86)\Arduino\hardware\tools\avr\lib\gcc\avr\4.9.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ProjectDir)__vm\.ROVLibs.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <IgnoreStandardIncludePath>false</IgnoreStandardIncludePath>
       <PreprocessorDefinitions>__AVR_ATmega2560__;_VMDEBUG=1;F_CPU=16000000L;ARDUINO=10807;ARDUINO_AVR_MEGA2560;ARDUINO_ARCH_AVR;__cplusplus=201103L;_VMICRO_INTELLISENSE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
@@ -122,10 +122,12 @@
     <ClInclude Include="Config.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="InputOutput.h" />
+    <ClInclude Include="InputSubSystem.h" />
+    <ClInclude Include="IOSubSystem.h" />
     <ClInclude Include="LevelMotor.h" />
     <ClInclude Include="Motor.h" />
-    <ClInclude Include="Motors.h" />
     <ClInclude Include="Output.h" />
+    <ClInclude Include="OutputSubSystem.h" />
     <ClInclude Include="RotaryCamera.h" />
     <ClInclude Include="Rov.h" />
     <ClInclude Include="ROVBuilderManipulator.h" />
@@ -136,16 +138,18 @@
     <ClInclude Include="UARTCommunicator.h" />
     <ClInclude Include="UDPConnection.h" />
     <ClInclude Include="__vm\.ROVLibs-master.vsarduino.h" />
+    <ClInclude Include="__vm\.ROVLibs.vsarduino.h" />
     <ClInclude Include="__vm\.TestAr.vsarduino.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BrushlessMotor.cpp" />
     <ClCompile Include="BrushMotor.cpp" />
-    <ClCompile Include="Input.cpp" />
-    <ClCompile Include="InputOutput.cpp" />
+    <ClCompile Include="Cameras.cpp" />
+    <ClCompile Include="InputSubSystem.cpp" />
+    <ClCompile Include="IOSubSystem.cpp" />
     <ClCompile Include="LevelMotor.cpp" />
     <ClCompile Include="Motor.cpp" />
-    <ClCompile Include="Output.cpp" />
+    <ClCompile Include="OutputSubSystem.cpp" />
     <ClCompile Include="RotaryCamera.cpp" />
     <ClCompile Include="Rov.cpp" />
     <ClCompile Include="ROVBuilderManipulator.cpp" />

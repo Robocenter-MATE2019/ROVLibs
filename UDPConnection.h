@@ -16,7 +16,6 @@ struct InputPacket
 	int8_t axisZ = 0; //! -100/100;    
 	int8_t axisW = 0; //! -100/100;
 	int8_t cameraRotation[2] = { 0, 0 };
-	//int8_t thrusterPower[6] = { 0, 0, 0, 0, 0, 0 };
 	uint8_t debugFlag = 0;
 	int8_t manipulatorRotation = 0; //! -100/100    
 	int8_t manipulatorGrab = 0; //! -1 close/+1 open;
@@ -51,5 +50,4 @@ private:
 	uint16_t m_remote_port;
 	byte m_mac[6] = { MAC };
 	Timer m_timer;
-	//Timer m_timer_1;
 };

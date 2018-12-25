@@ -30,15 +30,12 @@ void ThrustersSubSystem::set_power(int8_t x, int8_t y, int8_t w, int8_t z, uint8
 	int8_t power[THRUSTER_SIZE];
 	if(regulator_type & 0x1)
 	{
-		// depthReg();
 	}
 	if (regulator_type & 0x2)
 	{
-		// yawReg();
 	}
 	if (regulator_type & 0x4)
 	{
-		// rollReg();
 	}
 	manual_regulator(power, x, y, w, z);
 	for (int i = 0; i < THRUSTER_SIZE; i++)
