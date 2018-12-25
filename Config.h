@@ -4,6 +4,11 @@
 //////////////////Devices////////////////////////
 /////////////////////////////////////////////////
 
+
+#define OUTPUTSUBSYSTEM_ENABLE             1
+#define INPUTSUBSYSTEM_ENABLE              1
+#define IOSUBSYSTEM_ENABLE                 1
+
 #define MANIPULATOR_ENABLE                 1
 #define THRUSTERSSUBSYSTEM_ENABLE		   1
 #define ROTARYCAMERA_ENABLE				   1
@@ -72,4 +77,4 @@ constexpr int REMOTE_PORT = 5000;
 /////////////////SubSystem///////////////////////
 /////////////////////////////////////////////////
 
-constexpr int SUBSYSTEM_SIZE = SIZE_INPUT_DEVICES + SIZE_IO_DEVICES + SIZE_OUTPUT_DEVICES;
+constexpr int SUBSYSTEM_SIZE = INPUTSUBSYSTEM_ENABLE + OUTPUTSUBSYSTEM_ENABLE + IOSUBSYSTEM_ENABLE;
